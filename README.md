@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Home Page](https://i.im.ge/2022/06/24/ul85sy.png)
+![alt text](https://i.im.ge/2022/06/24/ul85sy.png)
 
     A music app made with the help of React.js.
     

@@ -37,7 +37,7 @@ const SearchBar = () => {
                 {
                     isSearchBarOpen &&
                     <>
-                        <Link to={"/home/search"} ref={searchLink}/>
+                        <Link to={"/search"} ref={searchLink}/>
                         <SearchSharpIcon style={{color: "grey"}} className="search-icon" fontSize="small"/>
                         <input id={"search-input"}
                                name={"searchQuery"}

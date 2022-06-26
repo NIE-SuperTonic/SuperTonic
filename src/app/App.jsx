@@ -7,6 +7,8 @@ import {ThemeContext, themes} from "../api/Theme";
 import musicDB from "../db/music";
 import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "../actions/actions";
+import Container from "../components/fragment/Container"
+import MusicCardContainer from "../components/fragment/MusicCardContainer";
 
 const App = () => {
 
@@ -34,6 +36,8 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Login/>}/>
                         <Route path="/home" element={<Home/>}/>
+                        <Route path="/home/about" element={<Home />} />
+                        <Route path="/home/search" element={<Home />} />
                     </Routes>
                 </Router>
             </>

@@ -5,7 +5,7 @@ import './index.scss';
 import {createStore} from "redux";
 import reducers from "./reducers/reducer";
 import {Provider} from 'react-redux';
-import Login from './components/Pages/Login.jsx'
+
 
 const store = createStore(
     reducers,

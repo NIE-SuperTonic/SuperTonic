@@ -7,8 +7,8 @@ import {ThemeContext, themes} from "../api/Theme";
 import musicDB from "../db/music";
 import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "../actions/actions";
-import Container from "../components/fragment/Container"
-import MusicCardContainer from "../components/fragment/MusicCardContainer";
+import LikeButton from "../components/fragment/LikeButton";
+
 
 const App = () => {
 
@@ -34,10 +34,16 @@ const App = () => {
             <>
                 <Router>
                     <Routes>
+                        
                         <Route path="/" element={<Login/>}/>
+                        <Route path="/check" element={<Check/>}/>
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/home/about" element={<Home />} />
                         <Route path="/home/search" element={<Home />} />
+                        <Route path="/home/profile" element={<Home />} />
+                        <Route path="/home/playlist" element={<Home />} />
+                        <Route path="/home/playlist/instrumental" element={<Home />} />
+                        <Route path="/home/playlist/electronic" element={<Home />} />
                     </Routes>
                 </Router>
             </>
@@ -45,4 +51,12 @@ const App = () => {
     );
 }
 
+function Check(){
+    return(<>
+        <LikeButton />
+        </>
+    );
+}
+
 export default App;
+

@@ -1,7 +1,8 @@
 #main {
   font-family: Consolas, sans-serif;
   background: #794141;
-  background: linear-gradient(110deg, #eb4559 50%, #f78259 50%);
+  //background: linear-gradient(110deg, #eb4559 50%, #f78259 50%);
+  background: linear-gradient(to right, #20002c 50%, #cbb4d4 50%);
   height: 100vh;
   text-align: center;
   display: flex;
@@ -37,7 +38,7 @@
       flex-basis: 50%;
       flex-grow: 1;
       h1 {
-        font-family: "Bungee", cursive;
+        font-family: "Bungee",cursive;
         font-size: 3rem;
       }
       p {

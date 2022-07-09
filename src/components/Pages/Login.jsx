@@ -16,7 +16,7 @@ function Login() {
           <img className="head-phone-img" src={HeadPhone} alt="" />
         </div>
         <div className="main-row-text">
-          <h1>Music for everyone</h1>
+          <h1 style={{color:"white"}}>Music for everyone</h1>
           <p>Without music, life would be a mistake</p>
           <Link to={"/home"} className="btn">
             Start Listening

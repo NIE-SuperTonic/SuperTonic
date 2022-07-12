@@ -8,6 +8,8 @@ import musicDB from "../db/music";
 import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "../actions/actions";
 import LikeButton from "../components/fragment/LikeButton";
+import SignIn from "../components/Pages/SignIn";
+import SignUp from "../components/Pages/SignUp";
 
 
 const App = () => {
@@ -36,6 +38,8 @@ const App = () => {
                     <Routes>
                         
                         <Route path="/" element={<Login/>}/>
+                        <Route path="/login" element={<SignIn/>}/>
+                        <Route path="/register" element={<SignUp/>}/>
                         <Route path="/check" element={<Check/>}/>
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/home/about" element={<Home />} />

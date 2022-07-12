@@ -7,11 +7,13 @@ import Container from "../fragment/Container";
 import Grade from 'grade-js';
 import SideBarOptions from "../fragment/SideBarOptions";
 import {PlaylistPlay} from "@material-ui/icons";
+import { store } from './firebase';
 
-function Profile() {
+function Profile({user}) {
 
     const {playlists} = useSelector(state => state.musicReducer);
     const [mostPlayed, setMostPlayed] = useState([]);
+    const [name, setName] = useState("");
 
     function sortByProperty(property) {
         return function (a, b) {
@@ -33,7 +35,14 @@ function Profile() {
     });
         
    
-
+    useEffect(() => {
+        console.log(user.uid)
+        store.users.doc(user.uid).get().then(snapshot => {
+            const {fname, lname} = snapshot.data();
+            setName(fname + ' ' + lname);
+            console.log(name);
+        });
+    }, []);
 
     return (
         <Container>
@@ -44,7 +53,7 @@ function Profile() {
                         VS
                     </Avatar>
                     <div className="profile-detail">
-                        <h3>Yathin S Rao</h3>
+                        <h3>{name}</h3>
                         <span className={"profile-playlist"}>
                             <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay}
                                             href={"/home/playlist/instrumental"} title={"Instrumental"}/>

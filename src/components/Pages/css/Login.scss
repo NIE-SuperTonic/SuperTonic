@@ -3,7 +3,9 @@
   background: #794141;
   //background: linear-gradient(110deg, #eb4559 50%, #f78259 50%);
   background: linear-gradient(to right, #20002c 50%, #cbb4d4 50%);
-  height: 100vh;
+  height: 100%;
+  background-repeat: repeat;
+  overflow-x: scroll;
   text-align: center;
   display: flex;
   flex-flow: column wrap;

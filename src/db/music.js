@@ -142,7 +142,8 @@ let musicDB = [
             download: "http://ncs.io/Ignite",
             stream: "http://youtu.be/zbqgv0mMfwk"
         }
-    }
+    },
+    
 ];
 
 export default musicDB;

@@ -18,8 +18,11 @@ function Login() {
         <div className="main-row-text">
           <h1 style={{color:"white"}}>Music for everyone</h1>
           <p>Without music, life would be a mistake</p>
-          <Link to={"/home"} className="btn">
-            Start Listening
+          <Link to={"/login"} className="btn">
+            Login
+          </Link>
+          <Link to={"/register"} className="btn">
+            Register
           </Link>
         </div>
       </div>

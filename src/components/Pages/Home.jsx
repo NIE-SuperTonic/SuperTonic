@@ -16,41 +16,46 @@ import Search from "./Search";
 import About from "./About";
 import Playlist from "../fragment/Playlist";
 import {Skeleton} from "@material-ui/lab";
+import {auth} from "./firebase";
+import {useAuthState} from "react-firebase-hooks/auth";
 
-function getCurrPage(pathName) {
+
+function getCurrPage(pathName, user) {
+    
     switch (pathName) {
         case "/home":
             return <MusicCardContainer/>
-        case "/home/search":
-            return <Search/>
+            case "/home/search":
+                return <Search/>
         case "/home/profile":
-            return <Profile/>
-        case "/home/add":
-            return <AddMusic/>
-        case "/home/about":
-            return <About/>
-        default:
+            return <Profile user={user}/>
+            case "/home/add":
+                return <AddMusic/>
+                case "/home/about":
+                    return <About/>
+                    default:
             if (pathName.startsWith("/home/playlist/")) {
                 return <Playlist/>
             }
             return null
+        }
     }
-}
-
-function Home() {
-
-
-    const [screenSize, setScreenSize] = useState(undefined);
-    const [currMusic, setCurrMusic] = useState(null);
-    const [Page, setCurrPage] = useState(<MusicCardContainer/>);
-
-    let pathname = window.location.pathname;
-    useEffect(() => {
-        setCurrPage(getCurrPage(pathname))
-    }, [pathname]);
-
+    
+    function Home() {
+        
+        
+        const [user, loading, error] = useAuthState(auth);
+        const [screenSize, setScreenSize] = useState(undefined);
+        const [currMusic, setCurrMusic] = useState(null);
+        const [Page, setCurrPage] = useState(<MusicCardContainer/>);
+        
+        let pathname = window.location.pathname;
+        useEffect(() => {
+            setCurrPage(getCurrPage(pathname, user))
+        }, [pathname]);
+        
     window.addEventListener("resize", handleResize);
-
+    
     function handleResize() {
         setScreenSize(window.innerWidth);
     }
@@ -59,15 +64,15 @@ function Home() {
         handleResize();
         return () => window.removeEventListener("resize", handleResize);
     });
-
+    
     const useStyle = useContext(ThemeContext);
     const {playing, bannerOpen} = useSelector(state => state.musicReducer);
 
-
+    
     useEffect(() => {
         setCurrMusic(playing)
     }, [playing])
-
+    
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {
         setLoaded(true)

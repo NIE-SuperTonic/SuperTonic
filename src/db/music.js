@@ -153,21 +153,91 @@ let musicDB = [
         }
     },
     {
-      id:9,
-      name:"Left Foot Up Right Foot Slide",
-      author_name: "Yung Nazty",
-      img: "ignite-1600419626-nHn4WXY79q.jpg",
+      id: 9,
+      name: "Spirit",
+      author_name: "PLEEG",
+      img: "notAvailable.jpg",
       lang: "ENGLISH",
-      timesPlayed:0,
+      timesPlayed: 0,
       like: false,
-      musicName:"Heuse & Tom Wilson - Ignite [NCS Release].mp3",
+      type: "instrumental",
+      musicName: "PLEEG - Spirit [NCS Release].mp3",
       attribution: {
-        song: "Heuse & Tom Wilson - Ignite [NCS Release]",
-        musicBy: "NoCopyrightSounds",
+          song: "PLEEG - Spirit [NCS Release]",
+          musicBy: "NoCopyrightSounds",
+          download: "http://ncs.io/Ignite",
+          stream: "http://youtu.be/zbqgv0mMfwk"
+      }
+  },
+  {
+    id: 10,
+    name: "Khariyat",
+    author_name: "Pritam, Amitabh B_Arijit Singh",
+    img: "notAvailable.jpg",
+    lang: "HINDI",
+    timesPlayed: 0,
+    like: false,
+    type: "instrumental",
+    musicName: "khariyat.mp3",
+    attribution: {
+        song: "KHAIRIYAT",
+        musicBy: "https://myconverters.com/en/youtube-to-mp3/",
         download: "http://ncs.io/Ignite",
         stream: "http://youtu.be/zbqgv0mMfwk"
-      }
     }
+},
+{
+  id: 11,
+  name: "Pasoori",
+  author_name: "Ali Sethi, Shae Gil",
+  img: "notAvailable.jpg",
+  lang: "HINDI",
+  timesPlayed: 0,
+  like: false,
+  type: "instrumental",
+  musicName: "pasoori.mp3",
+  attribution: {
+      song: "Pasoori",
+      musicBy: "https://myconverters.com/en/youtube-to-mp3/",
+      download: "http://ncs.io/Ignite",
+      stream: "http://youtu.be/zbqgv0mMfwk"
+  }
+},
+{
+  id: 12,
+  name: "Shayad",
+  author_name: "Pritam, Arijit Singh",
+  img: "notAvailable.jpg",
+  lang: "HINDI",
+  timesPlayed: 0,
+  like: false,
+  type: "instrumental",
+  musicName: "shayad.mp3",
+  attribution: {
+      song: "shayad",
+      musicBy: "https://myconverters.com/en/youtube-to-mp3/",
+      download: "http://ncs.io/Ignite",
+      stream: "http://youtu.be/zbqgv0mMfwk"
+  }
+},
+{
+  id: 13,
+  name: "bandey",
+  author_name: "Local Train",
+  img: "notAvailable.jpg",
+  lang: "HINDI",
+  timesPlayed: 0,
+  like: false,
+  type: "instrumental",
+  musicName: "bandey.mp3",
+  attribution: {
+      song: "bandey",
+      musicBy: "https://myconverters.com/en/youtube-to-mp3/",
+      download: "http://ncs.io/Ignite",
+      stream: "http://youtu.be/zbqgv0mMfwk"
+  }
+},
+    
 ];
 
 export default musicDB;

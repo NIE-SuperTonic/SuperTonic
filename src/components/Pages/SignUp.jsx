@@ -20,6 +20,7 @@ export default function SignUp(){
           <img className="head-phone-img" src={HeadPhone} alt="" />
         </div>
         <div className="main-row-text">
+        <h1 style={{color:"white"}}>Sign-up and enjoy 🎶</h1>
                <SignUpForm />
         </div>
       </div>
@@ -30,7 +31,7 @@ export default function SignUp(){
 function SignUpForm(){
   const navigate = useNavigate();
     return(<div>
-         <form onSubmit={e => {
+         <form  onSubmit={e => {
             e.preventDefault();
             const email = e.target[0].value;
             const password = e.target[1].value;

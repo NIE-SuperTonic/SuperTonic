@@ -16,11 +16,13 @@ import {ThemeContext} from "../../api/Theme";
 import {useDispatch, useSelector} from "react-redux";
 import {setBannerOpen, setCurrentPlaying} from "../../actions/actions";
 import Button from "@material-ui/core/Button";
-import LikeButton from "./LikeButton"
+// import LikeButton from "./LikeButton";
+// import "../assets/scss/LikeButton.css";
+
 
 function FooterMusicPlayer({music}) {
 
-    const [{id, name, author_name, img, musicName}, setCurrTrack] = useState(music);
+    const [{id, name, author_name, img, musicName,like}, setCurrTrack] = useState(music);
     const [isRepeatClicked, setRepeatClick] = useState(false);
     const [isPrevClicked, setPrevClicked] = useState(false);
     const [isNextClicked, setNextClicked] = useState(false);
@@ -31,7 +33,6 @@ function FooterMusicPlayer({music}) {
     const [duration, setDuration] = useState(0);
     const [currTime, setCurrTime] = useState(0);
     const [bannerToggle,setBannerToggle] = useState(false);
-
     const audioElement = useRef();
     const dispatch = useDispatch();
     const {playlists} = useSelector(state => state.musicReducer);
@@ -93,6 +94,7 @@ function FooterMusicPlayer({music}) {
         })
     });
 
+    
     useEffect(() => {
         setCurrTrack(music);
     }, [music]);
@@ -188,6 +190,7 @@ function FooterMusicPlayer({music}) {
                         <span>{formatTime(duration)}</span>
                     </p>
                 </div>
+                
                 <div className={"slider"}>
                     <Slider style={{color: useStyle.theme}} value={volume} onChange={handleVolumeChange}/>
                 </div>

@@ -59,6 +59,13 @@
         padding: 15px 20px;
         border-radius: 5px;
       }
+      input{
+        padding:10px;
+        border-radius:10px;
+      }
+      input:focus {
+        background-color: lightpink;
+      }
       .btn:hover{
         opacity: 0.9;
         cursor: pointer;

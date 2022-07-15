@@ -20,6 +20,7 @@ return (
         <img className="head-phone-img" src={HeadPhone} alt="" />
       </div>
       <div className="main-row-text">
+      <h1 style={{color:"white"}}>Login and enjoy 🎶</h1>
              <LoginForm />
       </div>
     </div>
@@ -32,7 +33,7 @@ function LoginForm(){
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
   return(<>
-    <form onSubmit={e => {
+    <form  onSubmit={e => {
             e.preventDefault();
             const email = e.target[0].value;
             const password = e.target[1].value;

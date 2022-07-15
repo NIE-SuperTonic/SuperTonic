@@ -24,6 +24,8 @@ function SideBar() {
                 </p>
                 <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} href={"/home/playlist/instrumental"}  title={"Instrumental"}/>
                 <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} href={"/home/playlist/electronic"}  title={"Electronic"}/>
+                <SideBarOptions className={"lib-sub"} Icon={PlaylistPlay} href={"/home/playlist/liked"}  title={"Liked Music"}/>
+
             </div>
         </aside>
     );

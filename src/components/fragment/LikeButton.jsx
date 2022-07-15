@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "../assets/scss/LikeButton.css";
 
 const LikeButtonComponent = () => {
-  const [like, setLike] = useState(100),
-    [isLike, setIsLike] = useState(false),
+  const [like, setLike] = useState(""),
+  [isLike, setIsLike] = useState(false),
     onLikeButtonClick = () => {
-      setLike(like + (isLike?-1:1));
+      setLike((isLike?"":"💜"));
       setIsLike(!isLike);
     };
 
@@ -21,7 +21,7 @@ const LikeButtonComponent = () => {
         .like-button {
             font-size: 1rem;
             padding: 5px 10px;
-            color:  #585858;
+            color:  #ad7dc9;
         }
         .liked {
             font-weight: bold;

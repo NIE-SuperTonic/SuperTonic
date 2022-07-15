@@ -6,6 +6,7 @@ let musicDB = [
         img: "shakedown.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type: "electronic",
         musicName: "Clarx - Shakedown [NCS Release].mp3",
         attribution: {
@@ -22,6 +23,7 @@ let musicDB = [
         img: "notAvailable.jpg",
         lang: null,
         timesPlayed: 0,
+        like: false,
         type:"instrumental",
         musicName: "mixkit-games-worldbeat-466.mp3",
         attribution: {
@@ -39,6 +41,7 @@ let musicDB = [
         lang: "ENGLISH",
         type: "electronic",
         timesPlayed: 0,
+        like: false,
         musicName: "ROY KNOX -  Over My Head (Feat. Mike Robert) [NCS Release].mp3",
         attribution: {
             song: "ROY KNOX - Over My Head (Feat. Mike Robert) [NCS Release]",
@@ -54,6 +57,7 @@ let musicDB = [
         img: "want-you-feat-sara-skinner-1586956276-s4lOrfrHQj.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type: "electronic",
         musicName: "Subtact - Want You (feat. Sara Skinner) [NCS Release].mp3",
         attribution: {
@@ -70,6 +74,7 @@ let musicDB = [
         img: "apocalypse-1600776027-tsCmgK4gEU.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type: "electronic",
         musicName: "Midranger - Apocalypse [NCS Release].mp3",
         attribution: {
@@ -86,6 +91,7 @@ let musicDB = [
         img: "alive.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type: "electronic",
         musicName: "N3WPORT - Alive (feat. Neoni) [NCS Release].mp3",
         attribution: {
@@ -102,6 +108,7 @@ let musicDB = [
         img: "notAvailable.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type:"instrumental",
         musicName: "impact.mp3",
         attribution: {
@@ -118,6 +125,7 @@ let musicDB = [
         img: "notAvailable.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type:"instrumental",
         musicName: "impact2.mp3",
         attribution: {
@@ -134,6 +142,7 @@ let musicDB = [
         img: "ignite-1600419626-nHn4WXY79q.jpg",
         lang: "ENGLISH",
         timesPlayed: 0,
+        like: false,
         type: "electronic",
         musicName: "Heuse & Tom Wilson - Ignite [NCS Release].mp3",
         attribution: {
@@ -143,7 +152,22 @@ let musicDB = [
             stream: "http://youtu.be/zbqgv0mMfwk"
         }
     },
-    
+    {
+      id:9,
+      name:"Left Foot Up Right Foot Slide",
+      author_name: "Yung Nazty",
+      img: "ignite-1600419626-nHn4WXY79q.jpg",
+      lang: "ENGLISH",
+      timesPlayed:0,
+      like: false,
+      musicName:"Heuse & Tom Wilson - Ignite [NCS Release].mp3",
+      attribution: {
+        song: "Heuse & Tom Wilson - Ignite [NCS Release]",
+        musicBy: "NoCopyrightSounds",
+        download: "http://ncs.io/Ignite",
+        stream: "http://youtu.be/zbqgv0mMfwk"
+      }
+    }
 ];
 
 export default musicDB;

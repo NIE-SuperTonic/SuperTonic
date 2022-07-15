@@ -20,10 +20,12 @@ const App = () => {
     useEffect(()=>{
         if (language === null || language.includes("any")){
             dispatch(setPlaylist(musicDB))
+        
+        // else if (language.includes('hindi')){
+        //     alert("No hindi tracks available")
+        // }
         }
-        else if (language.includes('hindi')){
-            alert("No hindi tracks available")
-        } else {
+        else {
             let x = musicDB.filter((item)=>(
                 item.lang && language.includes(item.lang.toLowerCase())
             ))

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import './App.scss';
 import Home from "../components/Pages/Home";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes,Navigate} from 'react-router-dom';
 import Login from "../components/Pages/Login";
 import {ThemeContext, themes} from "../api/Theme";
 import musicDB from "../db/music";
@@ -40,6 +40,7 @@ const App = () => {
                         <Route path="/" element={<Login/>}/>
                         <Route path="/login" element={<SignIn/>}/>
                         <Route path="/register" element={<SignUp/>}/>
+                        <Route path="home/signout" element={<Navigate replace to="/" />} />
                         <Route path="/check" element={<Check/>}/>
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/home/about" element={<Home />} />

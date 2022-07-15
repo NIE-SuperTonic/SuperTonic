@@ -1,7 +1,6 @@
 import React from 'react';
 import '../assets/scss/Developer.scss';
 import {IconButton} from "@material-ui/core";
-import AvatarImage from "../assets/img/avatar2.jpg";
 import {Facebook, Instagram, LinkedIn, Portrait, Twitter} from "@material-ui/icons";
 
 const Developer = (props) => {
@@ -10,7 +9,7 @@ const Developer = (props) => {
             {/* <h3 className={"Developer-head"}>Meet the developers</h3> */}
             <div className="Developer-profile">
                 <div className="Developer-profileCard">
-                    <img src={AvatarImage} alt="Profile"/>
+                    <img src={props.image} alt="Profile"/>
                     <div className={"Card-details"}>
                         <h3>{props.name}</h3>
                         <p>{props.role}</p>
@@ -18,6 +17,7 @@ const Developer = (props) => {
                 </div>
                 <div className="Developer-profileDetails">
                     <p>{props.detail}</p>
+                    <p>{props.extra}</p>
                     <div className="Card-btn">
                         <IconButton target={"_blank"}  href={"https://www.facebook.com/"} title={""}>
                             <Facebook/>

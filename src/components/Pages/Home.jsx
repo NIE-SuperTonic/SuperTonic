@@ -20,6 +20,7 @@ import {auth} from "./firebase";
 import {useAuthState} from "react-firebase-hooks/auth";
 
 
+
 function getCurrPage(pathName, user) {
     
     switch (pathName) {
@@ -48,7 +49,7 @@ function getCurrPage(pathName, user) {
         const [screenSize, setScreenSize] = useState(undefined);
         const [currMusic, setCurrMusic] = useState(null);
         const [Page, setCurrPage] = useState(<MusicCardContainer/>);
-        
+
         let pathname = window.location.pathname;
         useEffect(() => {
             setCurrPage(getCurrPage(pathname, user))

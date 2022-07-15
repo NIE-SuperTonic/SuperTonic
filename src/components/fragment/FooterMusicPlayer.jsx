@@ -190,7 +190,7 @@ function FooterMusicPlayer({music}) {
                         <span>{formatTime(duration)}</span>
                     </p>
                 </div>
-                
+                {/* <LikeButton /> */}
                 <div className={"slider"}>
                     <Slider style={{color: useStyle.theme}} value={volume} onChange={handleVolumeChange}/>
                 </div>

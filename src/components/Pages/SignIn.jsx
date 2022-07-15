@@ -51,7 +51,11 @@ function LoginForm(){
             <input type="email" placeholder="email" /> <br/>
             <input type="password" placeholder="passwd" /><br/>
             <button type="submit" className="btn">Login</button>
-          </form>
+          </form><br/>
+          Don't Have An Account? <br/>
+        <Link to={"/register"} className="btn">
+            Register
+        </Link>
   </>);
 }
 
